@@ -1,0 +1,196 @@
+/* * * * * * * *
+FONTS
+* * * * * * * */
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+/* * * * * * * *
+RESET
+* * * * * * * */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* * * * * * * *
+SETTINGS
+* * * * * * * */
+
+/* BORDER BOX RESET */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* FONT TO REM RESET */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.8rem; }
+
+/* * * * * * * *
+BASE
+* * * * * * * */
+
+/* FONT TO REM RESET */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300; }
+
+/* SVGS */
+.site-logo {
+  width: 75px;
+  height: 75px; }
+  .site-logo .background {
+    fill: #aed1c5; }
+  .site-logo .objects {
+    fill: #4e708e; }
+  .site-logo .detail {
+    fill: #DCDADB; }
+  .site-logo .tail {
+    fill: #001E33; }
+  .site-logo .middle {
+    fill: #E1CCBB; }
+
+/* * * * * * * *
+TEXT STYLES
+* * * * * * * */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: questrial; }
+
+h1 {
+  font-size: 4.4rem;
+}
+
+a, a:visited {
+  color: #4e708e;
+  text-decoration: none;
+  border-bottom: 3px solid #aed1c5;
+  transition: all 0.7s ease;
+  box-shadow: inset 0 0 0 0 #aed1c5; }
+
+a:focus, a:hover {
+  box-shadow: inset 400px 0 0 0 #aed1c5; }
+
+.underline {
+  border-bottom: 3px solid #aed1c5;
+}
+
+/* * * * * * * *
+COMPONENTS
+* * * * * * * */
+
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flexbox .grid {
+  padding: 1rem; }
+
+/* * * * * * * *
+HEADER
+* * * * * * * */
+.branding {
+  padding: 1rem;
+  height: 45px;
+  box-shadow: 0px -4px 24px 0px #bbbbbb; }
+
+.site-logo {
+  height: 25px;
+  width: 25px; }
+
+.branding a {
+  font-family: "Questrial", Verdana, sans-serif;
+  vertical-align: middle;
+  font-size: 2rem;
+  vertical-align: super;
+  display: inline-block; }
+
+nav {
+  display: inline-block;
+}
+
+/* * * * * * * *
+BODY
+* * * * * * * */
+
+#wrapper {
+  padding: 20px;
+}
+
+#wrapper section {
+  margin-bottom: 20px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro h1, .intro svg {
+  margin: 0 40px;
+}
+
+.intro h1 {
+  display: inline-block;
+}
+
+.intro svg {
+  height: 150px;
+  width: 150px;
+}
