@@ -4,7 +4,71 @@ FONTS
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Questrial);
-@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT AWESOME CLASSES */
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+ .fa-linkedin:before {
+   content: "\f0e1";
+ }
+
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
 
 /* * * * * * * *
 RESET
@@ -87,7 +151,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.4;
+  font-family: Lora, Helvetica, serif;}
 
 /* SVGS */
 .site-logo {
@@ -115,6 +181,16 @@ h1 {
   font-size: 4.4rem;
 }
 
+h2 {
+  font-size: 3rem;
+  margin-top: none;
+  margin-bottom: 20px;
+}
+
+h2:nth-child(even) {
+  border-bottom: 3px solid #4e708e;
+}
+
 a, a:visited {
   color: #4e708e;
   text-decoration: none;
@@ -125,8 +201,26 @@ a, a:visited {
 a:focus, a:hover {
   box-shadow: inset 400px 0 0 0 #aed1c5; }
 
+p {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.box-border {
+  border-top: 3px solid #aed1c5;
+  border-bottom: 3px solid #aed1c5;
+}
+
 .underline {
   border-bottom: 3px solid #aed1c5;
+}
+
+.print-only {
+  display: none;
 }
 
 /* * * * * * * *
@@ -168,21 +262,34 @@ nav {
 BODY
 * * * * * * * */
 
-#wrapper {
+#wrapper section {
+  margin-bottom: 20px;
   padding: 20px;
 }
 
-#wrapper section {
-  margin-bottom: 20px;
+#wrapper section:first-child {
+  margin-bottom: 0;
 }
 
-.intro {
-  display: flex;
+#wrapper section:nth-child(even) {
+  background-color: #f6efea;
+}
+
+#wrapper section:nth-child(even) h2 {
+ border-bottom: 3px solid #E1CCBB;
+ text-align: right;
+}
+
+#wrapper section:nth-child(odd) h2{
+  border-bottom: 3px solid #4e708e;
+}
+
+.intro .flexbox {
   align-items: center;
   justify-content: center;
 }
 
-.intro h1, .intro svg {
+.intro h1, .intro svg, .intro .socials {
   margin: 0 40px;
 }
 
@@ -193,4 +300,36 @@ BODY
 .intro svg {
   height: 150px;
   width: 150px;
+}
+
+.socials ul {
+  list-style-type: none;
+}
+
+.socials li {
+  display: block;
+  margin: 10px auto;
+}
+
+.socials a {
+  display: block;
+  border-left: 3px solid #aed1c5;
+  padding-left: 1px;
+}
+
+.socials i {
+  font-size: 2.6rem;
+}
+
+.description {
+  width: 100%;
+}
+
+.description p {
+  width: 70vw;
+  margin: 0 auto 20px;
+}
+
+.description p:last-child {
+  margin: 0 auto;
 }

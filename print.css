@@ -2,4 +2,13 @@
   header {
     display: none;
   }
+  .print-only {
+    display: inline;
+  }
+  i[aria-hidden="true"] {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
 }
