@@ -210,6 +210,10 @@ strong {
   font-weight: 600;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 .box-border {
   border-top: 3px solid #aed1c5;
   border-bottom: 3px solid #aed1c5;
@@ -217,6 +221,10 @@ strong {
 
 .underline {
   border-bottom: 3px solid #aed1c5;
+}
+
+.white-bg {
+  background-color: #fff;
 }
 
 .print-only {
@@ -326,7 +334,7 @@ BODY
 }
 
 .description p {
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto 20px;
 }
 
