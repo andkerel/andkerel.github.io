@@ -152,7 +152,6 @@ html {
 body {
   font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.4;
   font-family: Lora, Helvetica, serif;}
 
 /* SVGS */
@@ -181,10 +180,29 @@ h1 {
   font-size: 4.4rem;
 }
 
-h2 {
-  font-size: 3rem;
+h2, h3, h4, h5, h6 {
   margin-top: none;
   margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
 }
 
 h2:nth-child(even) {
@@ -204,6 +222,7 @@ a:focus, a:hover {
 p {
   margin-bottom: 20px;
   font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 strong {
@@ -271,7 +290,6 @@ BODY
 * * * * * * * */
 
 #wrapper section {
-  margin-bottom: 20px;
   padding: 20px;
 }
 
@@ -280,7 +298,7 @@ BODY
 }
 
 #wrapper section:nth-child(even) {
-  background-color: #f6efea;
+  background-color: #f9f9fb;
 }
 
 #wrapper section:nth-child(even) h2 {
@@ -290,6 +308,10 @@ BODY
 
 #wrapper section:nth-child(odd) h2{
   border-bottom: 3px solid #4e708e;
+}
+
+section h3 {
+  margin-bottom: 5px;
 }
 
 .intro .flexbox {
@@ -339,5 +361,10 @@ BODY
 }
 
 .description p:last-child {
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+}
+
+.dates {
+  font-style: italic;
+  margin-bottom: 5px;
 }
