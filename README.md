@@ -1,5 +1,7 @@
 # web-resume
-the current resume for andrea kereliuk
+the current resume for andrea kereliuk.
+
+updated print stylesheet; prints as a one-pager.
 
 visit at [https://andkerel.github.io](https://andkerel.github.io)
 
