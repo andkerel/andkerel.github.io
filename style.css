@@ -14,8 +14,8 @@ FONTS
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('fonts/fontawesome-webfont.eot');
+  src: url('fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2') format('woff2'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -177,12 +177,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: questrial; }
 
 h1 {
-  font-size: 4.4rem;
+  font-size: 5.4rem;
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: none;
-  margin-bottom: 20px;
+  margin: 20px auto 0;
 }
 
 h2 {
@@ -205,8 +204,9 @@ h6 {
   font-size: 1.8rem;
 }
 
-h2:nth-child(even) {
-  border-bottom: 3px solid #4e708e;
+hr {
+  border-top: 0;
+  border-bottom: 4px solid #E1CCBB;
 }
 
 a, a:visited {
@@ -219,8 +219,18 @@ a, a:visited {
 a:focus, a:hover {
   box-shadow: inset 400px 0 0 0 #aed1c5; }
 
+h2, h3, h4, h5, h6,
+p, ul, ol {
+  width: 80vw;
+  max-width: 1024px;
+  margin: 25px auto 0 auto;
+}
+
+h2 {
+  margin: 0 auto;
+}
+
 p {
-  margin: 10px 0 10px 0;
   font-size: 1.8rem;
   line-height: 1.4;
 }
@@ -231,7 +241,7 @@ strong {
 
 ul {
   list-style-type: circle;
-  margin-left: 30px;
+  padding-left: 30px;
 }
 
 li {
@@ -266,14 +276,28 @@ COMPONENTS
 .flexbox {
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 .flexbox .grid {
   padding: 1rem; }
 
+.width-contain {
+  width: 80vw;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 /* * * * * * * *
 HEADER
 * * * * * * * */
+
+
+.intro .flexbox {
+  align-items: center;
+  justify-content: initial;
+}
+
 .branding {
   padding: 1rem;
   height: 45px;
@@ -294,6 +318,53 @@ nav {
   display: inline-block;
 }
 
+nav ul {
+  width: auto;
+}
+
+.socials ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.socials li {
+  display: block;
+  margin: 10px auto;
+}
+
+.socials a {
+  display: block;
+  border-bottom: 0;
+  box-shadow: none;
+  padding-left: 1px;
+}
+
+.socials a:focus, .socials a:hover {
+  box-shadow: none;
+}
+
+.socials i {
+  font-size: 2.6rem;
+  transition: all 0.25s ease;
+}
+
+.socials a:focus i, .socials a:hover i {
+  color: #aed1c5;
+}
+
+.title-bounder {
+  position: relative;
+  margin: 0 0 0 40px;
+}
+
+.intro h1 {
+  display: inline-block;
+}
+
+.intro svg {
+  display: none;
+}
+
 /* * * * * * * *
 BODY
 * * * * * * * */
@@ -311,69 +382,47 @@ BODY
 }
 
 #wrapper section:nth-child(even) h2 {
- border-bottom: 3px solid #E1CCBB;
- text-align: right;
+  text-align: right;
 }
 
-#wrapper section:nth-child(odd) h2{
-  border-bottom: 3px solid #4e708e;
+#wrapper section:nth-child(even) hr {
+ border-bottom: 4px solid #E1CCBB;
+}
+
+#wrapper section:nth-child(odd) hr{
+  border-bottom: 4px solid #4e708e;
+}
+
+h2 + hr {
+  margin-top:0;
+}
+
+hr + p {
+  margin-top: 20px;
+}
+
+p + h3, ul + h3 {
+  border-top: 1px solid #E1CCBB;
+  padding-top: 25px;
+}
+
+#wrapper section:nth-child(odd) p + h3,
+#wrapper section:nth-child(odd) ul + h3 {
+  border-top: 1px solid #aed1c5;
 }
 
 section h3 {
   margin-bottom: 5px;
 }
 
-.intro .flexbox {
-  align-items: center;
-  justify-content: center;
-}
-
-.intro h1, .intro svg, .intro .socials {
-  margin: 0 40px;
-}
-
-.intro h1 {
-  display: inline-block;
-}
-
-.intro svg {
-  height: 150px;
-  width: 150px;
-}
-
-.socials ul {
-  list-style-type: none;
-}
-
-.socials li {
-  display: block;
-  margin: 10px auto;
-}
-
-.socials a {
-  display: block;
-  border-left: 3px solid #aed1c5;
-  padding-left: 1px;
-}
-
-.socials i {
-  font-size: 2.6rem;
-}
-
 .description {
   width: 100%;
 }
 
-.description p {
-  width: 80vw;
-  margin: 0 auto 20px;
-}
-
-.description p:last-child {
-  /*margin: 0 auto;*/
-}
-
 .dates {
   font-style: italic;
-  margin-bottom: 5px;
+}
+
+.dates, .skills {
+  margin: 10px auto 0 auto;
 }

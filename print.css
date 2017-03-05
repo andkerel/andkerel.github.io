@@ -2,13 +2,169 @@
   header {
     display: none;
   }
+
   .print-only {
     display: inline;
   }
-  i[aria-hidden="true"] {
+
+  .c-only {
     display: none;
   }
+
+  .underline {
+    border-bottom: 2px solid #4e708e;
+  }
+
+  .width-contain {
+    width: auto;
+    max-width: auto;
+  }
+
+  body, p, li {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+
+  h2, h3, h4, h5, h6,
+  p, ul, ol {
+    width: auto;
+    max-width: auto;
+    margin: 8px auto 0 auto;
+    line-height:1.3;
+  }
+
+  hr + p {
+    margin-top: 8px;
+  }
+
+  p + h3, ul + h3 {
+    border-top: 1px solid #E1CCBB;
+    padding-top: 8px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  #wrapper section:nth-child(even) hr {
+   border-bottom: 2px solid #E1CCBB;
+  }
+
+  #wrapper section:nth-child(odd) hr{
+    border-bottom: 2px solid #4e708e;
+  }
+
+  #wrapper section {
+    padding: 5px;
+  }
+
+  #wrapper section:nth-child(even) {
+    background-color: #fff;
+  }
+
+  nav {
+    display:block;
+  }
+
+  .socials li {
+    display: inline-block;
+    margin-right: 25px;
+  }
+
+  .socials {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E1CCBB;
+    text-align: right;
+
+  }
+
+  .socials a {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .socials i {
+    font-size: 1.6rem;
+  }
+
+  .intro svg {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .intro .flexbox {
+    display: block;
+  }
+
+  .title-bounder {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+
   .description {
     display: none;
   }
+
+  .experience, .education {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .experience {
+    width: 75%;
+  }
+  #wrapper section.experience {
+    padding-right: 20px;
+  }
+
+  .experience p,
+  .experience ul,
+  .experience h2,
+  .experience h3 {
+    width: 100%;
+  }
+
+  .education {
+    width: 25%;
+    vertical-align: top; }
+
+  .education p,
+  .education h2,
+  .education h3 {
+    width: 100%;
+  }
+
+  .loc {
+    display: block;
+    font-weight: 600;
+  }
+
 }
