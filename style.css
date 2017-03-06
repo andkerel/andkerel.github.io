@@ -407,8 +407,8 @@ p + h3, ul + h3 {
   padding-top: 25px;
 }
 
-#wrapper section:nth-child(odd) p + h3,
-#wrapper section:nth-child(odd) ul + h3 {
+section:nth-child(odd) p + h3,
+section:nth-child(odd) ul + h3 {
   border-top: 1px solid #aed1c5;
 }
 
