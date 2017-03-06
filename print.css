@@ -49,12 +49,22 @@
     font-size: 15px;
   }
 
+  a, a:visited {
+    color: #4e708e;
+    text-decoration: none;
+    border-bottom: 2px solid #aed1c5;
+    transition: all 0.7s ease;
+    box-shadow: inset 0 0 0 0 #aed1c5; }
+
+  a:focus, a:hover {
+    box-shadow: inset 400px 0 0 0 #aed1c5; }
+
   h2, h3, h4, h5, h6,
   p, ul, ol {
     width: auto;
     max-width: auto;
     margin: 8px auto 0 auto;
-    line-height:1.3;
+    line-height:1.2;
   }
 
   hr + p {
@@ -68,6 +78,7 @@
 
   li {
     margin-bottom: 5px;
+    line-height: 1.2;
   }
 
   #wrapper section:nth-child(even) hr {
