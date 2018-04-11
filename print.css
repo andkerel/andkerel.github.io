@@ -92,7 +92,7 @@
   }
 
   #wrapper section {
-    padding: 5px;
+    padding: 0 5px 5px;
   }
 
   #wrapper section:nth-child(even) {
@@ -105,7 +105,7 @@
 
   .socials li {
     display: inline-block;
-    margin-right: 25px;
+    margin: 0 25px 5px auto;
   }
 
   .socials {
@@ -139,11 +139,16 @@
     margin-left: 0;
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 
   .description {
     display: none;
+  }
+
+  .main {
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
   .experience, .education {
@@ -152,7 +157,7 @@
   }
 
   .experience {
-    width: 75%;
+    width: 78%;
   }
   #wrapper section.experience {
     padding-right: 20px;
@@ -166,7 +171,7 @@
   }
 
   .education {
-    width: 25%;
+    width: 22%;
     vertical-align: top; }
 
   .education p,
