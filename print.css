@@ -75,7 +75,13 @@
   section:nth-child(odd) ul + h3,
   section:nth-child(even) ul + h3 {
     border-top: 1px solid #DCDADB;
-    padding-top: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  #wrapper .independent {
+    border-top: 1px solid #4e708e;
+    margin-top: 20px;
   }
 
   li {
@@ -149,16 +155,22 @@
   .main {
     max-width: 1024px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 78% 22%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "one top" "one bottom";
+
   }
 
-  .experience, .education {
+  .experience, .education, .next {
     display: inline-block;
     padding: 5px;
   }
 
   .experience {
-    width: 78%;
+    grid-area: one;
   }
+
   #wrapper section.experience {
     padding-right: 20px;
   }
@@ -170,14 +182,23 @@
     width: 100%;
   }
 
+  .experience h3, .education h3, .next ul {
+    margin-top: 10px;
+  }
+
   .education {
-    width: 22%;
+    grid-area: top;
     vertical-align: top; }
 
   .education p,
   .education h2,
   .education h3 {
     width: 100%;
+  }
+
+  .next {
+    margin-top: 10px;
+    grid-area: bottom;
   }
 
   .loc {
